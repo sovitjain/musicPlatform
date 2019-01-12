@@ -4,7 +4,7 @@ App for creating a music platform which can support user creation, playlist and 
 ## Steps to run the application:
 Import the project as a maven project.
 run the below command:
-```mvn spring-boot:run
+```mvn spring-boot:run```
 
 Following endpoint is exposed:
 ```

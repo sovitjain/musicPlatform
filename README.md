@@ -16,6 +16,11 @@ Body:
 {
   "name":"sovit"
 }
+Sample response:
+{
+    "id": 3,
+    "name": "sovit"
+}
 ```
 ```
 Create a Playlist:
@@ -36,5 +41,31 @@ Sample response:
         "id": 3,
         "name": "sovit"
     }
+}
+```
+```
+Create a Tag:
+http://localhost:8080/playlist/{playlistId}/tags
+Header
+Content-Type:application/json
+Body:
+{
+"tagName":"indi11"
+}
+Sample response:
+{
+    "id": 835,
+    "tagName": "indi11",
+    "playlist": [
+        {
+            "id": 676,
+            "playlistName": "down the noise7",
+            "views": 500,
+            "user": {
+                "id": 675,
+                "name": "sovit6"
+            }
+        }
+    ]
 }
 ```

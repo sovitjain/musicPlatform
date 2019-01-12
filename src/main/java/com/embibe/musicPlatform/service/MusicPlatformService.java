@@ -1,7 +1,6 @@
 package com.embibe.musicPlatform.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -112,7 +111,6 @@ public class MusicPlatformService {
 	}
 
 	public List<AutoSuggestTag> autoSuggestTags(String inputTagName) {
-		tagsRepository.autoSuggestTags(inputTagName);
-		return null;
+		 return tagsRepository.autoSuggestTags(inputTagName);
 	}
 }

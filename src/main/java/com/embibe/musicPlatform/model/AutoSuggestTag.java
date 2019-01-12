@@ -11,8 +11,12 @@ public class AutoSuggestTag implements Serializable {
 	
 	private String tagName;
 	
-	private int playlistCount;
+	private long playlistCount;
 
+	public AutoSuggestTag(Long playlistCount, String tagName) {
+		this.tagName = tagName;
+		this.playlistCount = playlistCount;
+	}
 	public String getTagName() {
 		return tagName;
 	}
@@ -21,11 +25,11 @@ public class AutoSuggestTag implements Serializable {
 		this.tagName = tagName;
 	}
 
-	public int getPlaylistCount() {
+	public Long getPlaylistCount() {
 		return playlistCount;
 	}
 
-	public void setPlaylistCount(int playlistCount) {
+	public void setPlaylistCount(Long playlistCount) {
 		this.playlistCount = playlistCount;
 	}
 

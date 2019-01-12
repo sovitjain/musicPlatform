@@ -69,3 +69,19 @@ Sample response:
     ]
 }
 ```
+```
+When a person submits a tag(or part of), search all tags and find the occurance of those tags in the playlist:
+http://localhost:8080/autoSuggestTags?inputTagName=indi1
+Method: GET
+Sample response:
+[
+    {
+        "tagName": "indi11",
+        "playlistCount": 1
+    },
+    {
+        "tagName": "indi10",
+        "playlistCount": 1
+    }
+]
+```

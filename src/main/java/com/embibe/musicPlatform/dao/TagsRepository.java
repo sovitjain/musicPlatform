@@ -18,7 +18,8 @@ public interface TagsRepository extends JpaRepository<Tags, Long> {
 	 @Query(value = "SELECT new com.embibe.musicPlatform.model.AutoSuggestTag(count(p.id) as playlistCount, t.tagName as tagName) FROM  " +
 		    "  Playlist as p JOIN p.tags t " + 
 		    " group by t.id " +
-		    "having t.tagName like ?1%" )
+		    "having t.tagName like ?1%" +
+		    "order by count(p.id) desc")
 	 List<AutoSuggestTag> autoSuggestTags(String inputTagName);
 
 	 @Query(value = "SELECT new com.embibe.musicPlatform.model.DisplaySuggestedTags(t.tagName as tagName) " +

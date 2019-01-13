@@ -6,8 +6,16 @@ Import the project as a maven project.
 run the below command:
 ```mvn spring-boot:run```
 
+## Architecture diagram
+
+<img src="https://github.com/sovitjain/musicPlatform/blob/master/docs/Architecture_Diagram.png" alt="architecture diagram" width="600" height="200">
+
+## AWS infrastructure diagram
+
+<img src="https://github.com/sovitjain/musicPlatform/blob/master/docs/AWS_Infra.png" alt="aws infra diagram" width="700" height="500">
+
 ## DB design:
-<img src="https://github.com/sovitjain/musicPlatform/blob/master/DB_design.PNG" alt="alt text" width="800" height="400">
+<img src="https://github.com/sovitjain/musicPlatform/blob/master/docs/DB_design.PNG" alt="db design" width="800" height="400">
 
 ## AWS hosting
 The spring boot application is hosted in EC2 instance.

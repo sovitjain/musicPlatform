@@ -1,6 +1,9 @@
 # MusicPlatform
 App for creating a music platform which can support user creation, playlist and tagging.
 
+## Technology Used:
+Java, Spring Boot, JpaRepository, H2 DB
+
 ## Steps to run the application:
 Import the project as a maven project.
 run the below command:

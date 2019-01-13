@@ -48,7 +48,12 @@ public class MusicPlatformService {
 	}
 
 	public Page<Playlist> getPlaylistBasedOnViews(Pageable pageable) {
+//		Page<Playlist> playlistPage = playlistRepository.findAll(pageable);
+//		for (Playlist p: playlistPage) {
+//			p.getTags()
+//		}
 		return playlistRepository.findAll(pageable);
+		
 	}
 	
 	public int getPlayUnique() {

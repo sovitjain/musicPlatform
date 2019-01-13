@@ -32,8 +32,9 @@ public class Tags implements Serializable {
                 CascadeType.MERGE
             },
             mappedBy = "tags")
-    private Set<Playlist> playlist = new HashSet<>();
     @JsonIgnore
+    private Set<Playlist> playlist = new HashSet<>();
+
     public Tags(Long id, String tagName) {
     	this.id = id;
         this.tagName = tagName;

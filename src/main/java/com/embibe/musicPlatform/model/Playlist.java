@@ -44,7 +44,6 @@ public class Playlist implements Serializable {
     @JoinTable(name = "playlist_tags",
             joinColumns = { @JoinColumn(name = "playlist_id") },
             inverseJoinColumns = { @JoinColumn(name = "tags_id") })
-    @JsonIgnore
     private Set<Tags> tags = new HashSet<>();
     
     public Playlist(User user, Long id, String playlistName, int views) {

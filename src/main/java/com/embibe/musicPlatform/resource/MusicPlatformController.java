@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.embibe.musicPlatform.model.AutoSuggestTag;
+import com.embibe.musicPlatform.model.DisplaySuggestedTags;
 import com.embibe.musicPlatform.model.Playlist;
 import com.embibe.musicPlatform.model.Tags;
 import com.embibe.musicPlatform.model.User;
@@ -67,5 +68,9 @@ public class MusicPlatformController{
 		return musicPlatformService.autoSuggestTags(inputTagName);
 	}
 	
+	@GetMapping("/displaySuggestedTags")
+	public List<DisplaySuggestedTags> displaySuggestedTags(@RequestParam String inputTagName) {
+		return musicPlatformService.displaySuggestedTags(inputTagName);
+	}
 }
 

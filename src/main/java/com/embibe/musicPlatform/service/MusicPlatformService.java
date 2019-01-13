@@ -12,6 +12,7 @@ import com.embibe.musicPlatform.dao.TagsRepository;
 import com.embibe.musicPlatform.dao.UserRepository;
 import com.embibe.musicPlatform.exception.ResourceNotFoundException;
 import com.embibe.musicPlatform.model.AutoSuggestTag;
+import com.embibe.musicPlatform.model.DisplaySuggestedTags;
 import com.embibe.musicPlatform.model.Playlist;
 import com.embibe.musicPlatform.model.Tags;
 import com.embibe.musicPlatform.model.User;
@@ -112,5 +113,9 @@ public class MusicPlatformService {
 
 	public List<AutoSuggestTag> autoSuggestTags(String inputTagName) {
 		 return tagsRepository.autoSuggestTags(inputTagName);
+	}
+
+	public List<DisplaySuggestedTags> displaySuggestedTags(String inputTagName) {
+		return tagsRepository.displaySuggestedTags(inputTagName);
 	}
 }

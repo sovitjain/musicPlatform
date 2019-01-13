@@ -30,6 +30,9 @@ run the below command:
 The spring boot application is hosted in EC2 instance.
 ```IP address - 3.89.98.255 (replace localhost with this ip address)```
 
+Currently I have shutdown the EC2 instance as I have crossed the free tier range.
+Please reach out to me to switch it on. In addition IP address changes everytime I switch it on.
+
 ## Following endpoint is exposed:
 ```
 Create a User:

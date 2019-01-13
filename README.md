@@ -216,3 +216,12 @@ Sample response:
     "empty": false
 }
 ```
+## Testing via SQL:
+The sql files necessary for testing is stored in docs folder:
+https://github.com/sovitjain/musicPlatform/blob/master/docs/dml_script_test.sql
+https://github.com/sovitjain/musicPlatform/blob/master/docs/query_to_test_problem_statement.sql
+
+![user playlist](https://github.com/sovitjain/musicPlatform/blob/master/docs/user_playlist.screenshot.PNG)
+![tags playlist](https://github.com/sovitjain/musicPlatform/blob/master/docs/tags_playlist.screenshot.PNG)
+![problem statement 1 and 2](https://github.com/sovitjain/musicPlatform/blob/master/docs/problem_statement_1_2.PNG)
+![problem statement 3](https://github.com/sovitjain/musicPlatform/blob/master/docs/problem_statement_3.PNG)

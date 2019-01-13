@@ -7,7 +7,7 @@ run the below command:
 ```mvn spring-boot:run```
 
 ## DB design:
-[database design image](DB_design.png)
+![alt text](https://github.com/sovitjain/musicPlatform/blob/master/DB_design.PNG)
 
 ## AWS hosting
 The spring boot application is hosted in EC2 instance.

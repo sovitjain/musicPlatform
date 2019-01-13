@@ -21,7 +21,7 @@ run the below command:
 
 <img src="https://github.com/sovitjain/musicPlatform/blob/master/docs/Serverless_Approach.png" alt="aws infra diagram" width="700" height="400">
 
-### Note: To go for serverless vs EC2 approach will solely depend upon traffic pattern. A couple of MM transaction a day is fine with serverless beyond that EC2 approach will win. To further reduce the cost of EC2, we can opt for ECS approach, where we can share the container with another apps and leverage full utilization of hardware capacity.
+``` Note: To go for serverless vs EC2 approach will solely depend upon traffic pattern. A couple of MM transaction a day is fine with serverless beyond that EC2 approach will win. To further reduce the cost of EC2, we can opt for ECS approach, where we can share the container with another apps and leverage full utilization of hardware capacity.```
 
 ## DB design:
 <img src="https://github.com/sovitjain/musicPlatform/blob/master/docs/DB_design.PNG" alt="db design" width="800" height="400">

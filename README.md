@@ -1,4 +1,4 @@
-# musicPlatform
+# MusicPlatform
 App for creating a music platform which can support user creation, playlist and tagging.
 
 ## Steps to run the application:
@@ -6,7 +6,11 @@ Import the project as a maven project.
 run the below command:
 ```mvn spring-boot:run```
 
-Following endpoint is exposed:
+## AWS hosting
+The spring boot application is hosted in EC2 instance.
+```IP address - 3.89.98.255 (replace localhost with this ip address)```
+
+## Following endpoint is exposed:
 ```
 Create a User:
 http://localhost:8080/user

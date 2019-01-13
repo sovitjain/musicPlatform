@@ -50,23 +50,12 @@ Header
 Content-Type:application/json
 Body:
 {
-"tagName":"indi11"
+"tagName":"indi15"
 }
 Sample response:
 {
-    "id": 835,
-    "tagName": "indi11",
-    "playlist": [
-        {
-            "id": 676,
-            "playlistName": "down the noise7",
-            "views": 500,
-            "user": {
-                "id": 675,
-                "name": "sovit6"
-            }
-        }
-    ]
+    "id": 1635,
+    "tagName": "indi15"
 }
 ```
 ```
@@ -115,7 +104,7 @@ Sample response:
 ]
 ```
 ```
-Display paginated playlist and sorted based on views:
+Display paginated playlist and sorted based on views along with selected tags:
 http://localhost:8080/playlist?size=2&page=1
 Method: GET
 Note: default pagesize is 20 and page starts with index of 0
@@ -123,22 +112,66 @@ Sample response:
 {
     "content": [
         {
-            "id": 676,
-            "playlistName": "down the noise7",
-            "views": 500,
-            "user": {
-                "id": 675,
-                "name": "sovit6"
-            }
-        },
-        {
             "id": 677,
             "playlistName": "down the noise8",
             "views": 500,
             "user": {
                 "id": 675,
                 "name": "sovit6"
-            }
+            },
+            "tags": [
+                {
+                    "id": 678,
+                    "tagName": "indi6"
+                }
+            ]
+        },
+        {
+            "id": 676,
+            "playlistName": "down the noise7",
+            "views": 500,
+            "user": {
+                "id": 675,
+                "name": "sovit6"
+            },
+            "tags": [
+                {
+                    "id": 1569,
+                    "tagName": "indi12"
+                },
+                {
+                    "id": 678,
+                    "tagName": "indi6"
+                },
+                {
+                    "id": 803,
+                    "tagName": "indi10"
+                },
+                {
+                    "id": 707,
+                    "tagName": "indi7"
+                },
+                {
+                    "id": 1601,
+                    "tagName": "indi13"
+                },
+                {
+                    "id": 835,
+                    "tagName": "indi11"
+                },
+                {
+                    "id": 1633,
+                    "tagName": "indi14"
+                },
+                {
+                    "id": 739,
+                    "tagName": "indi8"
+                },
+                {
+                    "id": 771,
+                    "tagName": "indi9"
+                }
+            ]
         }
     ],
     "pageable": {
@@ -148,22 +181,22 @@ Sample response:
             "empty": false
         },
         "offset": 2,
-        "pageSize": 2,
         "pageNumber": 1,
-        "paged": true,
-        "unpaged": false
+        "pageSize": 2,
+        "unpaged": false,
+        "paged": true
     },
-    "last": false,
-    "totalElements": 6,
     "totalPages": 3,
+    "totalElements": 6,
+    "last": false,
     "size": 2,
     "number": 1,
+    "numberOfElements": 2,
     "sort": {
         "sorted": true,
         "unsorted": false,
         "empty": false
     },
-    "numberOfElements": 2,
     "first": false,
     "empty": false
 }

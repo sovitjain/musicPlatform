@@ -70,7 +70,7 @@ Sample response:
 }
 ```
 ```
-When a person submits a tag(or part of), search all tags and find the occurance of those tags in the playlist:
+AutoSuggestTag - When a person submits a tag(or part of), search all tags and find the occurance of those tags in the playlist:
 http://localhost:8080/autoSuggestTags?inputTagName=indi1
 Method: GET
 Sample response:
@@ -82,6 +82,35 @@ Sample response:
     {
         "tagName": "indi10",
         "playlistCount": 1
+    }
+]
+```
+```
+DisplaySuggestedTag - When a person selects a tag, search for that tag in all the playlist and recommend him tags based on the playlist and sort based on frequency of occurance:
+http://localhost:8080/displaySuggestedTags?inputTagName=indi6
+Method: GET
+Sample response:
+[
+    {
+        "tagName": "indi6"
+    },
+    {
+        "tagName": "indi10"
+    },
+    {
+        "tagName": "indi11"
+    },
+    {
+        "tagName": "indi5"
+    },
+    {
+        "tagName": "indi7"
+    },
+    {
+        "tagName": "indi8"
+    },
+    {
+        "tagName": "indi9"
     }
 ]
 ```

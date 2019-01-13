@@ -6,6 +6,9 @@ Import the project as a maven project.
 run the below command:
 ```mvn spring-boot:run```
 
+## DB design:
+[database design image](DB_design.png)
+
 ## AWS hosting
 The spring boot application is hosted in EC2 instance.
 ```IP address - 3.89.98.255 (replace localhost with this ip address)```

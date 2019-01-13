@@ -6,10 +6,12 @@ Import the project as a maven project.
 run the below command:
 ```mvn spring-boot:run```
 
-##Architecture diagram
+## Architecture diagram
+
 <img src="https://github.com/sovitjain/musicPlatform/blob/master/docs/Architecture_Diagram.png" alt="architecture diagram" width="600" height="200">
 
-##AWS infrastructure diagram
+## AWS infrastructure diagram
+
 <img src="https://github.com/sovitjain/musicPlatform/blob/master/docs/AWS_Infra.png" alt="aws infra diagram" width="700" height="500">
 
 ## DB design:

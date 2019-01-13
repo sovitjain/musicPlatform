@@ -1,2 +1,116 @@
 # musicPlatform
 App for creating a music platform which can support user creation, playlist and tagging.
+
+## Steps to run the application:
+Import the project as a maven project.
+run the below command:
+```mvn spring-boot:run```
+
+Following endpoint is exposed:
+```
+Create a User:
+http://localhost:8080/user
+Header
+Content-Type:application/json
+Body:
+{
+  "name":"sovit"
+}
+Sample response:
+{
+    "id": 3,
+    "name": "sovit"
+}
+```
+```
+Create a Playlist:
+http://localhost:8080/user/{userId}/playlist
+Header
+Content-Type:application/json
+Body:
+{
+"playlistName":"down the noise",
+"views":500
+}
+Sample response:
+{
+    "id": 4,
+    "playlistName": "down the noise",
+    "views": 500,
+    "user": {
+        "id": 3,
+        "name": "sovit"
+    }
+}
+```
+```
+Create a Tag:
+http://localhost:8080/playlist/{playlistId}/tags
+Header
+Content-Type:application/json
+Body:
+{
+"tagName":"indi11"
+}
+Sample response:
+{
+    "id": 835,
+    "tagName": "indi11",
+    "playlist": [
+        {
+            "id": 676,
+            "playlistName": "down the noise7",
+            "views": 500,
+            "user": {
+                "id": 675,
+                "name": "sovit6"
+            }
+        }
+    ]
+}
+```
+```
+AutoSuggestTag - When a person submits a tag(or part of), search all tags and find the occurance of those tags in the playlist:
+http://localhost:8080/autoSuggestTags?inputTagName=indi1
+Method: GET
+Sample response:
+[
+    {
+        "tagName": "indi11",
+        "playlistCount": 1
+    },
+    {
+        "tagName": "indi10",
+        "playlistCount": 1
+    }
+]
+```
+```
+DisplaySuggestedTag - When a person selects a tag, search for that tag in all the playlist and recommend him tags based on the playlist and sort based on frequency of occurance:
+http://localhost:8080/displaySuggestedTags?inputTagName=indi6
+Method: GET
+Sample response:
+[
+    {
+        "tagName": "indi6"
+    },
+    {
+        "tagName": "indi10"
+    },
+    {
+        "tagName": "indi11"
+    },
+    {
+        "tagName": "indi5"
+    },
+    {
+        "tagName": "indi7"
+    },
+    {
+        "tagName": "indi8"
+    },
+    {
+        "tagName": "indi9"
+    }
+]
+```

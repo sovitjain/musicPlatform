@@ -47,6 +47,10 @@ public class MusicPlatformService {
 		return playlistRepository.findByUserId(userId, pageable);
 	}
 
+	public Page<Playlist> getPlaylistBasedOnViews(Pageable pageable) {
+		return playlistRepository.findAll(pageable);
+	}
+	
 	public int getPlayUnique() {
 		return playlistRepository.findCountOfUniquePlaylist();
 	}
@@ -118,4 +122,5 @@ public class MusicPlatformService {
 	public List<DisplaySuggestedTags> displaySuggestedTags(String inputTagName) {
 		return tagsRepository.displaySuggestedTags(inputTagName);
 	}
+
 }

@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,6 +53,14 @@ public class MusicPlatformController{
 	@GetMapping("/user/{userId}/playlist")
 	public Page<Playlist> getAllPlaylist(@PathVariable (value = "userId") Long userId, Pageable pageable) {
 		return musicPlatformService.getAllPlaylist(userId, pageable);
+	}
+	
+	@SuppressWarnings("deprecation")
+	@GetMapping("/playlist")
+	public Page<Playlist> getPlaylistBasedOnViews(Pageable pageable) {
+		Sort sort = new Sort(new Sort.Order(Direction.DESC, "views"));
+		pageable = new PageRequest(pageable.getPageNumber(), pageable.getPageSize(), sort);
+		return musicPlatformService.getPlaylistBasedOnViews(pageable);
 	}
 	
 	@GetMapping("/playlist/{playlistId}/tags")

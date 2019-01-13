@@ -114,3 +114,57 @@ Sample response:
     }
 ]
 ```
+```
+Display paginated playlist and sorted based on views:
+http://localhost:8080/playlist?size=2&page=1
+Method: GET
+Note: default pagesize is 20 and page starts with index of 0
+Sample response:
+{
+    "content": [
+        {
+            "id": 676,
+            "playlistName": "down the noise7",
+            "views": 500,
+            "user": {
+                "id": 675,
+                "name": "sovit6"
+            }
+        },
+        {
+            "id": 677,
+            "playlistName": "down the noise8",
+            "views": 500,
+            "user": {
+                "id": 675,
+                "name": "sovit6"
+            }
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "sorted": true,
+            "unsorted": false,
+            "empty": false
+        },
+        "offset": 2,
+        "pageSize": 2,
+        "pageNumber": 1,
+        "paged": true,
+        "unpaged": false
+    },
+    "last": false,
+    "totalElements": 6,
+    "totalPages": 3,
+    "size": 2,
+    "number": 1,
+    "sort": {
+        "sorted": true,
+        "unsorted": false,
+        "empty": false
+    },
+    "numberOfElements": 2,
+    "first": false,
+    "empty": false
+}
+```

@@ -75,46 +75,50 @@ Sample response:
 ```
 ```
 AutoSuggestTag - When a person submits a tag(or part of), search all tags and find the occurance of those tags in the playlist:
-http://localhost:8080/autoSuggestTags?inputTagName=indi1
+http://localhost:8080/autoSuggestTags?inputTagName=i
 Method: GET
 Sample response:
 [
     {
-        "tagName": "indi11",
+        "tagName": "indie rock",
+        "playlistCount": 2
+    },
+    {
+        "tagName": "indie pop",
         "playlistCount": 1
     },
     {
-        "tagName": "indi10",
+        "tagName": "ind",
         "playlistCount": 1
     }
 ]
 ```
 ```
 DisplaySuggestedTag - When a person selects a tag, search for that tag in all the playlist and recommend him tags based on the playlist and sort based on frequency of occurance:
-http://localhost:8080/displaySuggestedTags?inputTagName=indi6
+http://localhost:8080/displaySuggestedTags?inputTagName=indie rock
 Method: GET
 Sample response:
 [
     {
-        "tagName": "indi6"
+        "tagName": "FloFilz"
     },
     {
-        "tagName": "indi10"
+        "tagName": "indie rock"
     },
     {
-        "tagName": "indi11"
+        "tagName": "Philanthrope"
     },
     {
-        "tagName": "indi5"
+        "tagName": "Evil Needle"
     },
     {
-        "tagName": "indi7"
+        "tagName": "indie pop"
     },
     {
-        "tagName": "indi8"
+        "tagName": "summer"
     },
     {
-        "tagName": "indi9"
+        "tagName": "ind"
     }
 ]
 ```
@@ -127,64 +131,41 @@ Sample response:
 {
     "content": [
         {
-            "id": 677,
-            "playlistName": "down the noise8",
-            "views": 500,
+            "id": 3,
+            "playlistName": "CoffeeHouse",
+            "views": 200,
             "user": {
-                "id": 675,
-                "name": "sovit6"
+                "id": 3,
+                "name": "Tim"
             },
             "tags": [
                 {
-                    "id": 678,
-                    "tagName": "indi6"
-                }
-            ]
-        },
-        {
-            "id": 676,
-            "playlistName": "down the noise7",
-            "views": 500,
-            "user": {
-                "id": 675,
-                "name": "sovit6"
-            },
-            "tags": [
-                {
-                    "id": 1569,
-                    "tagName": "indi12"
+                    "id": 5,
+                    "tagName": "indie rock"
                 },
                 {
-                    "id": 678,
-                    "tagName": "indi6"
+                    "id": 8,
+                    "tagName": "ind"
                 },
                 {
-                    "id": 803,
-                    "tagName": "indi10"
+                    "id": 1,
+                    "tagName": "FloFilz"
                 },
                 {
-                    "id": 707,
-                    "tagName": "indi7"
+                    "id": 3,
+                    "tagName": "Evil Needle"
                 },
                 {
-                    "id": 1601,
-                    "tagName": "indi13"
+                    "id": 6,
+                    "tagName": "summer"
                 },
                 {
-                    "id": 835,
-                    "tagName": "indi11"
+                    "id": 2,
+                    "tagName": "Philanthrope"
                 },
                 {
-                    "id": 1633,
-                    "tagName": "indi14"
-                },
-                {
-                    "id": 739,
-                    "tagName": "indi8"
-                },
-                {
-                    "id": 771,
-                    "tagName": "indi9"
+                    "id": 4,
+                    "tagName": "indie pop"
                 }
             ]
         }
@@ -201,17 +182,17 @@ Sample response:
         "unpaged": false,
         "paged": true
     },
-    "totalPages": 3,
-    "totalElements": 6,
-    "last": false,
+    "last": true,
+    "totalElements": 3,
+    "totalPages": 2,
     "size": 2,
     "number": 1,
-    "numberOfElements": 2,
     "sort": {
         "sorted": true,
         "unsorted": false,
         "empty": false
     },
+    "numberOfElements": 1,
     "first": false,
     "empty": false
 }
